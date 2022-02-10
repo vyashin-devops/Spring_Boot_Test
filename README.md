@@ -1,5 +1,3 @@
-# Simple WebApp on Spring Boot
-
 ## Simple Web App on Spring Boot
 GitHub Action Workflow to build and push Docker Spring Boot Application to Docker Hub and run container on EC2 Instance<br><br>
 Status of Last Deployment:<br></br>
