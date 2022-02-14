@@ -67,16 +67,12 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-#         port: ${{ secrets.PORT }}
-          script: docker rm -f $(docker ps -a -q) && docker rmi $(docker images -q)
-          #      ^ docker kill $(docker ps -q) && 
+          script: docker rm -f $(docker ps -a -q) && docker rmi $(docker images -q) 
         
       - name: Second executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
-        #continue-on-error: true
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-#         port: ${{ secrets.PORT }}
           script: docker run --name springtestdocker -d -p 80:80 yashinv/springtestdocker
